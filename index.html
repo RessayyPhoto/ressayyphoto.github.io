@@ -82,7 +82,7 @@
         /* Main Content Area */
         main { 
             margin-left: 280px; 
-            padding: 60px 40px; 
+            padding: 40px 40px 60px 40px; /* Adjusted padding to let images sit closer to the top */
             width: calc(100% - 280px);
             box-sizing: border-box;
         }
@@ -98,7 +98,7 @@
 
         /* Home Page Styling adapted to new layout */
         .home-content {
-            max-width: 800px;
+            width: 100%; /* Removed max-width restriction so images stretch fully */
         }
         .profile-pic {
             width: 120px;
@@ -118,18 +118,18 @@
             font-size: 14px;
             color: #aaa;
             line-height: 1.6;
-            margin-bottom: 50px;
-            max-width: 500px;
+            margin-bottom: 60px; /* Extra breathing room before the massive photos */
+            max-width: 500px; /* Keeps text readable while images expand */
         }
 
         /* 2-Column Grid matching the screenshot */
         .grid { 
             column-count: 2;
-            column-gap: 40px;
+            column-gap: 30px; /* Tighter gap to maximize image size */
         }
 
         .grid-item { 
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             break-inside: avoid;
             display: flex; 
             cursor: pointer;
@@ -149,7 +149,7 @@
         .home-covers {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 40px;
+            gap: 30px; /* Tighter gap */
         }
         .cover-card {
             cursor: pointer;
@@ -171,7 +171,7 @@
             letter-spacing: 0.5px;
         }
 
-        /* Lightbox Styles (Preserved) */
+        /* Lightbox Styles */
         .lightbox {
             display: none; position: fixed; z-index: 999; left: 0; top: 0; width: 100%; height: 100%; 
             background-color: rgba(0,0,0,0.98); 
@@ -179,7 +179,7 @@
             opacity: 0; transition: opacity 0.3s ease;
         }
         .lightbox.show { display: flex; opacity: 1; }
-        .lightbox-content { max-width: 90%; max-height: 80vh; object-fit: contain; }
+        .lightbox-content { max-width: 98%; max-height: 95vh; object-fit: contain; } /* Increased to take up almost the entire screen */
         .lightbox-caption { margin-top: 1.5rem; color: #888; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; }
         .lightbox-close { position: absolute; top: 30px; right: 40px; color: #fff; font-size: 40px; cursor: pointer; transition: color 0.3s; }
         .lightbox-close:hover { color: #888; }
@@ -388,4 +388,3 @@
     </script>
 </body>
 </html>
-
